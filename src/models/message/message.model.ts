@@ -15,13 +15,16 @@ export const Message = db.define<MessageI>('message', {
         primaryKey: true,
         autoIncrement: true
     },
-    message: {
+    messageIvonne: {
         type: DataTypes.TEXT,
+    },
+    messageViviana: {
+        type: DataTypes.TEXT,
+    },
+    count: {
+        type: DataTypes.INTEGER
     },
     name: {
-        type: DataTypes.TEXT,
-    },
-    email: {
         type: DataTypes.TEXT,
     },
     confirmation: {

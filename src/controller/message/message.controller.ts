@@ -16,7 +16,6 @@ export const createMessage = async(req: Request, res: Response) => {
     try {
         const { body } = req;
         await Message.create(body);
-        await templateMail(confirmation(), body.email);
         response.code201(req, res);
     } catch (error){
         return response.code500(req, res, error)
